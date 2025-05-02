@@ -1,1 +1,92 @@
-/* 여기에 스타일을 구현해 주세요 */
+/* tag 리셋 */
+button {
+  border: 0;
+  padding: 0;
+  background-color: initial;
+}
+
+/* 필드 세팅 */
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* group_avatars | ul */
+.group_avatars {
+  background-color: #fff;
+  max-width: 516px;
+  padding: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+
+  .group_avatars_items {
+    position: relative;
+
+    .gai_pop_btn {
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 64px;
+      height: 64px;
+    }
+    .gai_pop_con[popover]:popover-open:not(dialog) {
+      padding: 20px;
+      border: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 10px rgb(0 0 0/0.4);
+
+      img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      p:nth-child(3) {
+        font-size: 12px;
+      }
+    }
+    .gai_pop_con[popover]:-internal-popover-in-top-layer::backdrop {
+      background-color: rgb(0 0 0/0.4);
+    }
+  }
+
+  /* 아바타 온라인/오프라인 설정 */
+  .group_avatars_items.online {
+    .gai_pop_con p:nth-child(3) {
+      color: #4cfe88;
+    }
+  }
+  .group_avatars_items.offline {
+    .gai_pop_con p:nth-child(3) {
+      color: #a7a7a7;
+    }
+  }
+  .group_avatars_items::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .group_avatars_items.online::after {
+    content: '온라인 상태';
+    background-color: #4cfe88;
+  }
+  .group_avatars_items.offline::after {
+    content: '오프라인 상태';
+    background-color: #dbdbdb;
+  }
+}
