@@ -5,6 +5,7 @@
   --green_light: #e9f0fd;
   --silver: #999999;
   --sliver_light: #dadada;
+  --red: #ff1414;
 
   --px4: 0.25rem;
   --px8: 0.5rem;
@@ -138,6 +139,7 @@ label {
       width: 24px;
       aspect-ratio: 1/1;
       background-image: var(--svg_uncheck);
+      background-size: cover;
     }
   }
 
