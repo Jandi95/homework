@@ -31,13 +31,14 @@
         <ul class="login_input_list">
           <li class="form_input">
             <label class="sr_only" for="formInput01">아이디(이메일)</label>
-            <input id="formInput01" name="inputEmail" type="email" placeholder="아이디(이메일)" required />
-            <span class="error">아이디는 이메일 형식으로 입력해주세요.</span>
+            <!-- 추후 js를 통해 input에 에러시 aria-invalid="true" 동적 삽입 -->
+            <input id="formInput01" aria-errormessage="errorMsg01" name="inputEmail" type="email" placeholder="아이디(이메일)" required />
+            <span id="errorMsg01" class="error">아이디는 이메일 형식으로 입력해주세요.</span>
           </li>
           <li class="form_input">
             <label class="sr_only" for="formInput02">비밀번호</label>
-            <input id="formInput02" name="inputPwd" type="password" placeholder="비밀번호" minlength="10" required />
-            <span class="error">비밀번호는 10자리 이상 입력해 주세요.</span>
+            <input id="formInput02" aria-describedby="errorMsg02" name="inputPwd" type="password" placeholder="비밀번호" pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{10,}" required />
+            <span id="errorMsg02" class="error" aria-live="polite">비밀번호는 10자리 이상 입력해 주세요.</span>
           </li>
         </ul>
         <div class="form_button">

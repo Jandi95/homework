@@ -64,11 +64,6 @@ label {
   clip: rect(0 0 0 0);
 }
 
-/* form submit시 검증 후 에러메세지 출력 용도 */
-input:user-invalid + .error {
-  display: block;
-}
-
 /* 로고 컴포넌트 */
 .logo_link {
   --logo_color: var(--green);
@@ -101,6 +96,10 @@ input:user-invalid + .error {
       --fi_background: var(--green_light);
 
       outline: none;
+    }
+
+    &:user-invalid + .error {
+      display: block;
     }
   }
 
