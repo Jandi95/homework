@@ -1,3 +1,98 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+@keyframes hoverLink {
+  100% {
+    border: 1px solid var(--hover-color);
+    background-color: var(--hover-color);
+    color: var(--white);
+  }
+}
+
+/* 카드 컴포넌트 */
+.card-component {
+  --txt-size-headline: var(--large-text);
+  --txt-size-summary: var(--base-text);
+  --txt-color: var(--black);
+
+  background-color: var(--white);
+  block-size: var(--size);
+  text-align: center;
+  color: var(--txt-color);
+  padding-block-start: var(--large-spacing);
+
+  .headline {
+    font-size: var(--txt-size-headline);
+    font-weight: 800;
+    margin-block-end: var(--small-spacing);
+  }
+
+  .summary {
+    font-size: var(--txt-size-summary);
+    margin-block-end: var(--small-spacing);
+  }
+
+  .date {
+    display: block;
+    font-size: var(--small-text);
+    color: var(--gray);
+    margin-block-end: var(--small-spacing);
+  }
+
+  .link-area {
+    --point-color: var(--black);
+    --hover-color: var(--black-light);
+    --txt-size: var(--xx-small-text);
+
+    display: inline-flex;
+    flex-flow: row wrap;
+    gap: var(--base-spacing);
+
+    .link {
+      padding-block: var(--x-small-spacing);
+      padding-inline: var(--small-spacing);
+      border: 1px solid var(--point-color);
+      border-radius: 999px;
+      font-size: var(--txt-size);
+      color: var(--point-color);
+
+      &:focus {
+        outline: 2px solid var(--hover-color);
+        outline-offset: 4px;
+      }
+
+      &:hover,
+      &:focus {
+        animation: hoverLink 0s forwards;
+      }
+
+      &.fill {
+        background-color: var(--point-color);
+        color: var(--white);
+      }
+    }
+  }
+
+  &.dark {
+    --txt-color: var(--white);
+
+    background-color: var(--black);
+
+    .link {
+      --point-color: var(--blue-300);
+      --hover-color: var(--blue-100);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    --txt-size-headline: var(--extra-large-text);
+    --txt-size-summary: var(--medium-text);
+
+    /* padding-block-start: var(--extra-large-spacing); */
+
+    .link-area {
+      --txt-size: var(--x-small-text);
+    }
+  }
+}

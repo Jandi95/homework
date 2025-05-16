@@ -1,3 +1,111 @@
-@import "./card-component.css";
+@import './card-component.css';
+
+.wrapper {
+  @media (min-width: 1024px) {
+    padding: 1.25rem;
+  }
+}
 
 /* 카드 레이아웃 */
+.main-product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 1.25rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card-component {
+      br {
+        display: none;
+      }
+      &#productIpadPro {
+        grid-column: 1/3;
+      }
+      &#productIpadAir {
+        grid-column: 1/3;
+      }
+      &#productIphone15Pro {
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+
+/* 이미지 세팅 */
+.card-component {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &#productIpadPro {
+    background-image: url('../products/ipad_pro.jpeg');
+  }
+  &#productIpadAir {
+    background-image: url('../products/ipad_air.jpeg');
+  }
+  &#productIphone15Pro {
+    background-image: url('../products/iphone15_pro.jpeg');
+  }
+  &#productIphone15 {
+    background-image: url('../products/iphone15.jpeg');
+  }
+  &#productWatch {
+    background-image: url('../products/apple_watch.jpeg');
+  }
+  &#productMacBookAir {
+    background-image: url('../products/macbook_air.jpeg');
+  }
+  &#productAirPodsPro {
+    background-image: url('../products/airpods_pro.jpeg');
+  }
+
+  @media (min-width: 1024px) {
+    &#productIpadPro {
+      background-image: url('../products/ipad_pro_wide.jpeg');
+    }
+    &#productIpadAir {
+      background-image: url('../products/ipad_air_wide.jpeg');
+    }
+    &#productIphone15Pro {
+      background-image: url('../products/iphone15_pro_wide.jpeg');
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    &#productIpadPro {
+      background-image: url('../products/ipad_pro_2x.jpeg');
+    }
+    &#productIpadAir {
+      background-image: url('../products/ipad_air_2x.jpeg');
+    }
+    &#productIphone15Pro {
+      background-image: url('../products/iphone15_pro_2x.jpeg');
+    }
+    &#productIphone15 {
+      background-image: url('../products/iphone15_2x.jpeg');
+    }
+    &#productWatch {
+      background-image: url('../products/apple_watch_2x.jpeg');
+    }
+    &#productMacBookAir {
+      background-image: url('../products/macbook_air_2x.jpeg');
+    }
+    &#productAirPodsPro {
+      background-image: url('../products/airpods_pro_2x.jpeg');
+    }
+
+    @media (min-width: 1024px) {
+      &#productIpadPro {
+        background-image: url('../products/ipad_pro_wide_2x.jpeg');
+      }
+      &#productIpadAir {
+        background-image: url('../products/ipad_air_wide_2x.jpeg');
+      }
+      &#productIphone15Pro {
+        background-image: url('../products/iphone15_pro_wide_2x.jpeg');
+      }
+    }
+  }
+}

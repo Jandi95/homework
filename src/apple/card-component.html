@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,42 @@
     <link rel="apple-touch-icon" href="./favicon/apple-favicon.svg" />
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/card-component.css" />
+
+    <style>
+      body {
+        padding: 5%;
+        h1 {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        h2 {
+          margin: 20px 0 10px;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- 카드 컴포넌트 -->
-
+    <h1>카드 컴포넌트</h1>
+    <h2>- 라이트 컴포넌트</h2>
+    <div id="" class="card-component">
+      <h3 class="headline">Product</h3>
+      <p class="summary">로렘로렘로렘잇섬<br />로렘로렘잇섬로렘</p>
+      <time class="date" datetime="2025-05-16">출시일 추후 공개</time>
+      <div class="link-area">
+        <a class="link fill" href="#" aria-label="product">더 알아보기</a>
+        <a class="link" href="#" aria-label="product">가격 보기</a>
+      </div>
+    </div>
+    <h2>- 다크 컴포넌트</h2>
+    <div id="" class="card-component dark">
+      <h3 class="headline">Product</h3>
+      <p class="summary">로렘로렘로렘잇섬<br />로렘로렘잇섬로렘</p>
+      <time class="date" datetime="2025-05-16">출시일 추후 공개</time>
+      <div class="link-area">
+        <a class="link fill" href="#" aria-label="product">더 알아보기</a>
+        <a class="link" href="#" aria-label="product">가격 보기</a>
+      </div>
+    </div>
   </body>
 </html>
