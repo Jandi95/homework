@@ -40,71 +40,71 @@
   background-repeat: no-repeat;
 
   &#productIpadPro {
-    background-image: url('../products/ipad_pro.jpeg');
+    background-image: url('../products/ipad_pro.avif');
   }
   &#productIpadAir {
-    background-image: url('../products/ipad_air.jpeg');
+    background-image: url('../products/ipad_air.avif');
   }
   &#productIphone15Pro {
-    background-image: url('../products/iphone15_pro.jpeg');
+    background-image: url('../products/iphone15_pro.avif');
   }
   &#productIphone15 {
-    background-image: url('../products/iphone15.jpeg');
+    background-image: url('../products/iphone15.avif');
   }
   &#productWatch {
-    background-image: url('../products/apple_watch.jpeg');
+    background-image: url('../products/apple_watch.avif');
   }
   &#productMacBookAir {
-    background-image: url('../products/macbook_air.jpeg');
+    background-image: url('../products/macbook_air.avif');
   }
   &#productAirPodsPro {
-    background-image: url('../products/airpods_pro.jpeg');
+    background-image: url('../products/airpods_pro.avif');
   }
 
   @media (min-width: 1024px) {
     &#productIpadPro {
-      background-image: url('../products/ipad_pro_wide.jpeg');
+      background-image: url('../products/ipad_pro_wide.avif');
     }
     &#productIpadAir {
-      background-image: url('../products/ipad_air_wide.jpeg');
+      background-image: url('../products/ipad_air_wide.avif');
     }
     &#productIphone15Pro {
-      background-image: url('../products/iphone15_pro_wide.jpeg');
+      background-image: url('../products/iphone15_pro_wide.avif');
     }
   }
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     &#productIpadPro {
-      background-image: url('../products/ipad_pro_2x.jpeg');
+      background-image: url('../products/ipad_pro_2x.avif');
     }
     &#productIpadAir {
-      background-image: url('../products/ipad_air_2x.jpeg');
+      background-image: url('../products/ipad_air_2x.avif');
     }
     &#productIphone15Pro {
-      background-image: url('../products/iphone15_pro_2x.jpeg');
+      background-image: url('../products/iphone15_pro_2x.avif');
     }
     &#productIphone15 {
-      background-image: url('../products/iphone15_2x.jpeg');
+      background-image: url('../products/iphone15_2x.avif');
     }
     &#productWatch {
-      background-image: url('../products/apple_watch_2x.jpeg');
+      background-image: url('../products/apple_watch_2x.avif');
     }
     &#productMacBookAir {
-      background-image: url('../products/macbook_air_2x.jpeg');
+      background-image: url('../products/macbook_air_2x.avif');
     }
     &#productAirPodsPro {
-      background-image: url('../products/airpods_pro_2x.jpeg');
+      background-image: url('../products/airpods_pro_2x.avif');
     }
 
     @media (min-width: 1024px) {
       &#productIpadPro {
-        background-image: url('../products/ipad_pro_wide_2x.jpeg');
+        background-image: url('../products/ipad_pro_wide_2x.avif');
       }
       &#productIpadAir {
-        background-image: url('../products/ipad_air_wide_2x.jpeg');
+        background-image: url('../products/ipad_air_wide_2x.avif');
       }
       &#productIphone15Pro {
-        background-image: url('../products/iphone15_pro_wide_2x.jpeg');
+        background-image: url('../products/iphone15_pro_wide_2x.avif');
       }
     }
   }
